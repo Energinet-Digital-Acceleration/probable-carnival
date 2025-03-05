@@ -1,0 +1,16 @@
+﻿services:
+  consoleapp1:
+    image: consoleapp1
+    build:
+      context: .
+      dockerfile: ConsoleApp1/Dockerfile
+    volumes:
+      - ./data:/app/shared
+
+  consoleapp2:
+    image: consoleapp2
+    build:
+      context: .
+      dockerfile: ConsoleApp2/Dockerfile
+    volumes:
+      - ./data:/app/shared
